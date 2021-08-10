@@ -1,13 +1,164 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* common */
+* {
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 5px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  background: #f3f3f3; /*#53c1de*/
+  color: #1d2129;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+p {
+  margin-bottom: 30px;
+}
+
+ul {
+  list-style-type: none;
+  width: 100%;
+  margin: 25px auto 10px;
+  padding: 0;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #385898;
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  cursor: pointer !important;
+}
+
+input[type="submit"]:disabled,
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed !important;
+}
+
+.right {
+  float: right;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.rounded {
+  border-radius: 3px;
+}
+
+span {
+  line-height: normal;
+  vertical-align: middle;
+  padding: 0;
+}
+
+.red {
+  color: red;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  border-bottom: 1px solid #5250507e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.container > div {
+  width: 100%;
+}
+
+/* form */
+.formContainer {
+  padding: 1rem 3rem;
+}
+.orderForm {
+  max-width: 450px;
+  background: #e9ebee;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 3px;
+}
+.orderForm ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.orderForm ul li {
+  display: block;
+  margin-bottom: 10px;
+  min-height: 35px;
+  height: 100%;
+  line-height: inherit;
+}
+.orderForm ul li .fieldStyle {
+  box-sizing: border-box;
+  padding: 8px;
+  outline: none;
+  border: 1px solid #dddfe2;
+}
+.orderForm ul li .fieldStyle:focus {
+  box-shadow: 0 0 5px #b0cfe0;
+  border: 1px solid #b0cfe0;
+}
+.orderForm ul li .fieldSplit {
+  width: 49%;
+}
+.orderForm ul li .fieldFull {
+  width: 100%;
+}
+.orderForm ul li input.alignLeft {
+  float: left;
+}
+.orderForm ul li input.alignRight {
+  float: right;
+}
+.orderForm ul li textarea {
+  width: 100%;
+  height: 100px;
+  font-family: inherit;
+}
+
+.orderForm ul li input[type="button"],
+.orderForm ul li input[type="submit"] {
+  background-color: #28a745;
+  color: #fff;
+  border-color: #28a745;
+  border: 1px solid transparent;
+  display: block;
+  margin: 30px auto 0;
+  width: 100%;
+  padding: 10px 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* footer */
+
+footer .container {
+  border-bottom: 0px !important;
+  padding-top: 0px;
+  color: #616163;
+}
+
+/* debug purpose, remove in production */
+
+.react:after {
+  content: var(--contenti);
+  color: var(--color);
+  font-weight: bold;
+  font-style: italic;
 }
